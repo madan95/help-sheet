@@ -6,7 +6,7 @@ module.exports = {
   entry: [path.join(__dirname, "src", "index.js")], //Entry point of module
   output: {
     //Where to emit the bundle/static
-    path: path.join(__dirname, "build"),
+    path: path.join(__dirname, "docs"),
     filename: "index.bundle.js"
   },
   devtool: "inline-source-map", //maps to orginal file for debuging
