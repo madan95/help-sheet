@@ -1,0 +1,21 @@
+.upsell-top-text {
+  &__table {
+    display: table;
+	  width: 100%;
+  }
+  &__body {
+    display: table-row-group;
+  }
+  &__row {
+    display: table-row;
+    border: 2px solid red;
+  }
+  &__cell {
+    border: 1px solid #999999;
+    padding: 3px 10px;
+    display: list-item;
+    @media (min-width: 700px) {
+      display: table-cell;
+    }
+  }
+}
