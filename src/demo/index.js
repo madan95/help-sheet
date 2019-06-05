@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import TableRowCol from "./layout/table-row-col";
+import HoverSliderButton from "./button/hover-slider";
 
 import "../style.scss";
 
@@ -9,6 +10,10 @@ const pages = {
   tableRowCol: {
     name: "Table Row Col",
     render: () => <TableRowCol />
+  },
+  hoverButtonSlider: {
+    name: "Sliding button",
+    render: () => <HoverSliderButton />
   }
 };
 
