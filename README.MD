@@ -1,1 +1,1 @@
-Helpful snippets.
+Helpful snippets for future reference.
