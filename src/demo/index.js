@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 
 import TableRowCol from "./layout/table-row-col";
 import HoverSliderButton from "./button/hover-slider";
-
+import BootstrapLikeGrid from "./layout/bootstrap-like-grid";
 import "../style.scss";
 
 const pages = {
@@ -14,7 +14,12 @@ const pages = {
   hoverButtonSlider: {
     name: "Sliding button",
     render: () => <HoverSliderButton />
+  },
+  gridBootstraplike: {
+    name: "Bootstrap like grid",
+    render: () => <BootstrapLikeGrid />
   }
+
 };
 
 class Demo extends React.Component {
