@@ -4,6 +4,7 @@ import "./index.scss";
 export default class index extends Component {
   render() {
     return (
+      <div className="bootstrapl-like-grid">
       <div className="container">
         <div className="container__row">
           <div className="container__col-sm-12 container__col-md-4">
@@ -22,6 +23,7 @@ export default class index extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

@@ -1,0 +1,72 @@
+.grid-with-gutter {
+  // Screen sizes
+  $b-sm: 768px;
+  $b-md: 992px;
+  $b-lg: 1200px;
+
+  // Grid
+  $max-width: 960px;
+  $container: 15px;
+  $mobile-gutter: 15px;
+  $gutter: 15px;
+
+  $page-gutter: 15px;
+  $g-xs: 15px;
+  $g-md: 15px;
+
+  @mixin container() {
+    width: 100%;
+    padding-left: $container;
+    padding-right: $container;
+    @media screen and (min-width: $b-sm) {
+      max-width: $max-width;
+      margin: 0 auto;
+    }
+  }
+
+  @mixin row($mobile-gutter: $page-gutter) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+  }
+
+  @mixin cols($n, $basis: 12) {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+    @media screen and (min-width: $b-sm) {
+      width: (100% / $basis) * $n;
+      max-width: (100% / $basis) * $n;
+      flex-basis: (100% / $basis) * $n;
+    }
+  }
+
+  @mixin cols-pad() {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  @mixin cols-push($n, $basis: 12) {
+    margin-left: (100% / $basis) * $n;
+  }
+
+  .container {
+    @include container;
+    border: dotted 1px green;
+    &__row {
+      @include row();
+    }
+    &__col {
+      @include cols(4, 12);
+      @include cols-pad;
+    }
+    &__stuff {
+      border: solid 1px lightcoral;
+    }
+    &__offset {
+      @include cols-push(4, 12);
+    }
+  }
+}

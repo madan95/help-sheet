@@ -4,7 +4,10 @@ import * as ReactDOM from "react-dom";
 import TableRowCol from "./layout/table-row-col";
 import HoverSliderButton from "./button/hover-slider";
 import BootstrapLikeGrid from "./layout/bootstrap-like-grid";
+import GridWithGutter from "./layout/grid-with-gutter";
+
 import "../style.scss";
+import Random from "../utils/random";
 
 const pages = {
   tableRowCol: {
@@ -18,6 +21,14 @@ const pages = {
   gridBootstraplike: {
     name: "Bootstrap like grid",
     render: () => <BootstrapLikeGrid />
+  },
+  gridWithGutter: {
+    name: "Grid with gutter",
+    render: () => <Random>
+      {(getRandomColor)=> (
+        <GridWithGutter getRandomColor={getRandomColor}/>
+      )}
+    </Random>
   }
 
 };
