@@ -5,6 +5,7 @@ import TableRowCol from "./layout/table-row-col";
 import HoverSliderButton from "./button/hover-slider";
 import BootstrapLikeGrid from "./layout/bootstrap-like-grid";
 import GridWithGutter from "./layout/grid-with-gutter";
+import Toggle from "./button/toggle";
 
 import "../style.scss";
 import Random from "../utils/random";
@@ -29,8 +30,11 @@ const pages = {
         <GridWithGutter getRandomColor={getRandomColor}/>
       )}
     </Random>
-  }
-
+  },
+  Toggle: {
+    name: "Toggle",
+    render: () => <Toggle />
+  },
 };
 
 class Demo extends React.Component {
