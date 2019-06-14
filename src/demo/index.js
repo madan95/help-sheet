@@ -6,6 +6,7 @@ import HoverSliderButton from "./button/hover-slider";
 import BootstrapLikeGrid from "./layout/bootstrap-like-grid";
 import GridWithGutter from "./layout/grid-with-gutter";
 import Toggle from "./button/toggle";
+import RadioStyled from "./button/radio-styled";
 
 import "../style.scss";
 import Random from "../utils/random";
@@ -25,16 +26,20 @@ const pages = {
   },
   gridWithGutter: {
     name: "Grid with gutter",
-    render: () => <Random>
-      {(getRandomColor)=> (
-        <GridWithGutter getRandomColor={getRandomColor}/>
-      )}
-    </Random>
+    render: () => (
+      <Random>
+        {getRandomColor => <GridWithGutter getRandomColor={getRandomColor} />}
+      </Random>
+    )
   },
   Toggle: {
     name: "Toggle",
     render: () => <Toggle />
   },
+  radioStyled: {
+    name: "Radio Styled",
+    render: () => <RadioStyled />
+  }
 };
 
 class Demo extends React.Component {
