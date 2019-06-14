@@ -1,10 +1,13 @@
 .bootstrapl-like-grid {
-
   //Layout
   $grid__bp-lg: 992;
   $grid__bp-md: 768;
   $grid__cols: 12;
-  $map-grid-props: ('-sm': 0, '-md': $grid__bp-md, '-lg': $grid__bp-lg);
+  $map-grid-props: (
+    "-sm": 0,
+    "-md": $grid__bp-md,
+    "-lg": $grid__bp-lg
+  );
 
   @mixin create-mq($breakpoint) {
     @if ($breakpoint == 0) {
@@ -44,7 +47,6 @@
     @each $modifier, $breakpoint in $map-grid-props {
       @include create-col-classes($modifier, $grid__cols, $breakpoint);
     }
-
   }
 
   // Visual
@@ -54,7 +56,6 @@
     }
     &__stuff {
       border: solid 1px mediumaquamarine;
-
     }
   }
 }

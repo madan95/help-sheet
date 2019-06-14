@@ -1,4 +1,4 @@
-.toggle{
+.toggle {
   &__toggle-container {
     text-decoration: underline;
     display: flex;
@@ -24,7 +24,7 @@
     input:focus {
       & ~ label {
         &::after {
-          background-color: red
+          background-color: red;
         }
       }
       & ~ label.checked {
@@ -51,7 +51,7 @@
       width: 55px;
       height: 30px;
       &::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         width: calc(55px - 2 * 2px);
@@ -63,7 +63,7 @@
       &::after {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         width: 20px;
         height: 20px;
         border-radius: 100%;
