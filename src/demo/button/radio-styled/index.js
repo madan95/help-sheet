@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import './index.scss';
+import React, { useState } from "react";
+import "./index.scss";
 
 const initialState = {
   status: false
@@ -12,7 +12,7 @@ function RadioStyled() {
     <>
       <div className="radio-styled">
         <label className="radio-styled__check-container">
-            Option 1
+          Option 1
           <input
             type="radio"
             name="name"
@@ -27,7 +27,7 @@ function RadioStyled() {
           <span className="radio-styled__checkmark" />
         </label>
         <label className="radio-styled__check-container">
-            Option 2
+          Option 2
           <input
             type="radio"
             name="name"

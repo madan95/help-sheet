@@ -41,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/madan95/cheat-sheet/issues"
   },
-  "homepage": "https://github.com/madan95/cheat-sheet#readme"
+  "homepage": "https://github.com/madan95/cheat-sheet#readme",
+  "dependencies": {
+    "firebase-tools": "^7.0.0"
+  }
 }

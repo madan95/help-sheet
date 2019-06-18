@@ -1,0 +1,15 @@
+.transition-slide-down {
+  &__header {
+    &:hover {
+      ~ .transition-slide-down__content {
+        max-height: 500px; //Any height larger than the content will likely be
+      }
+    }
+  }
+  &__content {
+    background-color: pink;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+    max-height: 0;
+  }
+}

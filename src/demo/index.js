@@ -7,6 +7,7 @@ import BootstrapLikeGrid from "./layout/bootstrap-like-grid";
 import GridWithGutter from "./layout/grid-with-gutter";
 import Toggle from "./button/toggle";
 import RadioStyled from "./button/radio-styled";
+import TransitionSlideDown from "../component/transition-slide-down";
 
 import "../style.scss";
 import Random from "../utils/random";
@@ -39,6 +40,10 @@ const pages = {
   radioStyled: {
     name: "Radio Styled",
     render: () => <RadioStyled />
+  },
+  TransitionSlideDown: {
+    name: "Transition Slide down",
+    render: () => <TransitionSlideDown />
   }
 };
 
