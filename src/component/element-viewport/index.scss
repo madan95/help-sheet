@@ -1,0 +1,26 @@
+.floating {
+    &__box {
+        height: 400px;
+        width: 400px;
+        margin: auto;
+        background-color: aqua;
+        margin-bottom: 100px;
+    }
+    &__float {
+        border: solid 1px #e1e0e1;
+        padding: 17px 20px 18px;
+        background-color: pink;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        div {
+            background: orange;
+            max-width: 800px;
+            margin: auto;
+        }
+    }
+}
+.hidden {
+    display: none;
+}

@@ -8,6 +8,7 @@ import GridWithGutter from "./layout/grid-with-gutter";
 import Toggle from "./button/toggle";
 import RadioStyled from "./button/radio-styled";
 import TransitionSlideDown from "../component/transition-slide-down";
+import ElementViewPort from "../component/element-viewport";
 
 import "../style.scss";
 import Random from "../utils/random";
@@ -44,6 +45,10 @@ const pages = {
   TransitionSlideDown: {
     name: "Transition Slide down",
     render: () => <TransitionSlideDown />
+  },
+  ElementViewPort: {
+    name: "Element (BOX-2) visible only when BOX-1 is outside Viewport ",
+    render: () => <ElementViewPort />
   }
 };
 
