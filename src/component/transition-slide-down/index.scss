@@ -2,14 +2,16 @@
   &__header {
     &:hover {
       ~ .transition-slide-down__content {
-        max-height: 500px; //Any height larger than the content will likely be
+        max-height: 400px; //Any height larger than the content will likely be
+        opacity: 1;
       }
     }
   }
   &__content {
     background-color: pink;
-    transition: max-height 0.5s ease;
+    transition: all 0.5s ease;
     overflow: hidden;
     max-height: 0;
+    opacity: 0;
   }
 }
