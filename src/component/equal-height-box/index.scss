@@ -1,0 +1,14 @@
+.equal-height-container {
+  width: 100%;
+  .equal-height{
+    width: 45%;
+  }
+  .left {
+    float: left;
+    border: dotted pink;
+  }
+  .right {
+    float: right;
+    border: dotted blue;
+  }
+}

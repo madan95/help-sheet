@@ -9,6 +9,7 @@ import Toggle from "./button/toggle";
 import RadioStyled from "./button/radio-styled";
 import TransitionSlideDown from "../component/transition-slide-down";
 import ElementViewPort from "../component/element-viewport";
+import EqualHeightBox from "../component/equal-height-box";
 
 import "../style.scss";
 import Random from "../utils/random";
@@ -49,7 +50,11 @@ const pages = {
   ElementViewPort: {
     name: "Element (BOX-2) visible only when BOX-1 is outside Viewport ",
     render: () => <ElementViewPort />
-  }
+  },
+  EqualHeightBox: {
+    name: "JS to equalise box heights",
+    render: () => <EqualHeightBox />
+  },
 };
 
 class Demo extends React.Component {
