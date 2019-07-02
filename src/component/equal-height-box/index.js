@@ -19,22 +19,23 @@ export default class EqualHeightBox extends React.PureComponent {
     console.log('Highest Height: ' + highestHeight);
 
     setTimeout(() => {
-      this.setSameHeightForElements(elements, highestHeight);
+      this.setHeightForElements(elements, `${highestHeight}px`);
     }, 5000);
 
     window.addEventListener('resize', () => {
       console.log('window resized');
-      this.setSameHeightForElements(elements, highestHeight);
+      this.setHeightForElements(elements, 'auto');
+      this.setHeightForElements(elements, `${highestHeight}px`);
     })
   }
 
-  setSameHeightForElements = (elements, highestHeight) => {
+  setHeightForElements = (elements, height) => {
     for (let item of elements) {
-      item.style.height = `${highestHeight}px`;
+      item.style.height = height;
     }
   }
 
-    render() {
+  render() {
     return (
       <div className="equal-height-container">
         <div className="equal-height left">
