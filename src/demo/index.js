@@ -13,6 +13,7 @@ import EqualHeightBox from "../component/equal-height-box";
 
 import "../style.scss";
 import Random from "../utils/random";
+import {WidthWindowContainer} from "../component/window-width";
 
 const pages = {
   tableRowCol: {
@@ -55,6 +56,10 @@ const pages = {
     name: "JS to equalise box heights",
     render: () => <EqualHeightBox />
   },
+  WidthWindowContainer: {
+    name: "JS window width render component.",
+    render: () => <WidthWindowContainer/>
+  }
 };
 
 class Demo extends React.Component {
