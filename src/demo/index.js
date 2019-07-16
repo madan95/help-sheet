@@ -14,6 +14,7 @@ import EqualHeightBox from "../component/equal-height-box";
 import "../style.scss";
 import Random from "../utils/random";
 import { WidthWindowContainer } from "../component/window-width";
+import ModalWrapper, { SomeCustomPage } from "../component/simple-modal-render";
 
 const pages = {
   tableRowCol: {
@@ -59,6 +60,10 @@ const pages = {
   WidthWindowContainer: {
     name: "JS window width render component.",
     render: () => <WidthWindowContainer />
+  },
+  SomeCustomPage: {
+    name: "Simple Reuseable Modal",
+    render: () => <SomeCustomPage />
   }
 };
 
