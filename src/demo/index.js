@@ -13,7 +13,7 @@ import EqualHeightBox from "../component/equal-height-box";
 
 import "../style.scss";
 import Random from "../utils/random";
-import {WidthWindowContainer} from "../component/window-width";
+import { WidthWindowContainer } from "../component/window-width";
 
 const pages = {
   tableRowCol: {
@@ -58,7 +58,7 @@ const pages = {
   },
   WidthWindowContainer: {
     name: "JS window width render component.",
-    render: () => <WidthWindowContainer/>
+    render: () => <WidthWindowContainer />
   }
 };
 

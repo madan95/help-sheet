@@ -7,33 +7,34 @@ export default class EqualHeightBox extends React.PureComponent {
   }
 
   componentDidMount() {
-    const container = document.querySelector('.equal-height-container');
-    const elements = container.querySelectorAll('.equal-height');
+    const container = document.querySelector(".equal-height-container");
+    const elements = container.querySelectorAll(".equal-height");
     let highestHeight = 0;
 
     for (let item of elements) {
       let clientHeight = item.clientHeight;
-      console.log('Client Height: ' + clientHeight);
-      highestHeight = (clientHeight > highestHeight) ? clientHeight : highestHeight;
+      console.log("Client Height: " + clientHeight);
+      highestHeight =
+        clientHeight > highestHeight ? clientHeight : highestHeight;
     }
-    console.log('Highest Height: ' + highestHeight);
+    console.log("Highest Height: " + highestHeight);
 
     setTimeout(() => {
       this.setHeightForElements(elements, `${highestHeight}px`);
     }, 5000);
 
-    window.addEventListener('resize', () => {
-      console.log('window resized');
-      this.setHeightForElements(elements, 'auto');
+    window.addEventListener("resize", () => {
+      console.log("window resized");
+      this.setHeightForElements(elements, "auto");
       this.setHeightForElements(elements, `${highestHeight}px`);
-    })
+    });
   }
 
   setHeightForElements = (elements, height) => {
     for (let item of elements) {
       item.style.height = height;
     }
-  }
+  };
 
   render() {
     return (
@@ -50,4 +51,4 @@ export default class EqualHeightBox extends React.PureComponent {
       </div>
     );
   }
-};
+}
