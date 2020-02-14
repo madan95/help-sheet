@@ -27,7 +27,7 @@ npm manifest:
     "name": "cheat-sheet",
     "version": "1.0.0",
     "description": "Reusable Helpful components",
-    "main": "index.js",
+    "main": "2-List.stories.js",
     "scripts": {
       "build": "webpack",
       "development": "NODE_ENV=development webpack",

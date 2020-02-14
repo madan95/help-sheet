@@ -105,6 +105,7 @@ class Demo extends React.Component {
     );
   }
 }
+export default Demo;
 
 function init() {
   ReactDOM.render(<Demo />, document.querySelector("#root"));
