@@ -10,7 +10,7 @@
     "watch": "webpack --watch",
     "format": "prettier --write \"./*.{json,js}\" \"./src/**/*.{js,scss,ts,tsx,css}\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs"
   },
   "author": "madan",
   "license": "ISC",
