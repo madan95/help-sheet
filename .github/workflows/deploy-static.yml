@@ -1,4 +1,4 @@
-name: Building & Deploying static
+name: Build and Deploy
 on:
   push:
     branches:
@@ -6,13 +6,34 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-    name: Test
     steps:
-      - uses: actions/checkout@v2 # checkout current repo
-      - uses: actions/setup-node@v1 # checkout node action from repo to use specific node
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build
+        run: yarn run build-storybook
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
         with:
-          node-version: '10.x'
-      - run: yarn install
-      - run: yarn run build-storybook
-
+          name: docs
+          path: docs
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: docs
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
