@@ -6,14 +6,13 @@ on:
 
 jobs:
   build:
-    name: Build static
     runs-on: ubuntu-latest
+    name: Test
     steps:
-    - name: Build
-    - uses: actions/checkout@v2 # checkout current repo
-    - uses: actions/setup-node@v1 # checkout node action from repo to use specific node
-      with:
-        node-version: '10.x'
-    - run: yarn install
-    - run: yarn run build-storybook
+      - uses: actions/checkout@v2 # checkout current repo
+      - uses: actions/setup-node@v1 # checkout node action from repo to use specific node
+        with:
+          node-version: '10.x'
+      - run: yarn install
+      - run: yarn run build-storybook
 
