@@ -1,5 +1,5 @@
 {
-  "name": "cheat-sheet",
+  "name": "help-sheet",
   "version": "1.0.0",
   "description": "Reusable Helpful components",
   "main": "index.js",
@@ -42,12 +42,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madan95/cheat-sheet.git"
+    "url": "git+https://github.com/madan95/help-sheet.git"
   },
   "bugs": {
-    "url": "https://github.com/madan95/cheat-sheet/issues"
+    "url": "https://github.com/madan95/help-sheet/issues"
   },
-  "homepage": "https://github.com/madan95/cheat-sheet#readme",
+  "homepage": "https://github.com/madan95/help-sheet#readme",
   "dependencies": {
     "@storybook/cli": "^5.3.13",
     "firebase-tools": "^7.0.0"
