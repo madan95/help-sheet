@@ -1,5 +1,10 @@
 #root {
 }
+.basic-container {
+  display: block;
+  padding: 8px;
+  margin: 8px;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

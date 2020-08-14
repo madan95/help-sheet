@@ -15,7 +15,7 @@ module.exports = {
     modules: [path.resolve(__dirname, "src"), "node_modules"] //Helps resolving to relative paths when importing anything form src
   },
   devServer: {
-    contentBase: path.join(__dirname, "src") //Helps webpack-dev-server on what files to serve in the browser
+    contentBase: [path.join(__dirname, "src")] //Helps webpack-dev-server on what files to serve in the browser
   },
   /* Loaders, allows webpack to process other types of file and convert them (scss/css/png)
    *
